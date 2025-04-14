@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9367315e-477e-48bd-9d2a-a1dd2df891d4" name="Changes" comment="" />
+    <list default="true" id="9367315e-477e-48bd-9d2a-a1dd2df891d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Implementations/DirectionsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Implementations/DirectionsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Implementations/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Implementations/MySQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Implementations/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Implementations/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Interfaces/IDirectionsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Interfaces/IDirectionsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Interfaces/IStudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Interfaces/IStudentDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +28,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2vXM0ilvFJvqTcaC8fa3KUxYIyd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,9 +41,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/juanh/Desktop/fuck-u/2do/programacion 3/TP - 5 - JDBC/jdbc_mvc_mysql"
+    "last_opened_file_path": "C:/Users/juanh/Desktop/fuck-u/2do/programacion 3/TP - 5 - JDBC/JDBC/mysql-connector-j-9.3.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

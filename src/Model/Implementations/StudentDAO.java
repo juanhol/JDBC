@@ -15,20 +15,37 @@ public class StudentDAO implements IStudentDAO {
 
     @Override
     public void delete(int id) {
-
+        String sql="DELETE FROM alumnos WHERE id=?";
     }
 
     @Override
-    public void modify(int id) {
+    public void updateAge(int id,int age) {
+        String sql="UPDATE alumnos SET edad=? WHERE id=?";
 
+        connection=MySQLConnection.getInstance().getConnection();
+        try (PreparedStatement stmt=connection.prepareStatement(sql)){
+            stmt.setInt(1,age);
+            stmt.setInt(2,id);
+
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected>0)
+                System.out.println("Successfully updated.");
+            else
+                System.out.println("error");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("successfully updated.");
     }
 
     @Override
-    public List toList() {
-        List<Student> studentsList=new ArrayList<>();
+    public ArrayList<Student> toList() {
+        ArrayList<Student> studentsList=new ArrayList<>();
         String sql="SELECT * FROM alumnos";
-        try (Connection connection=MySQLConnection.getInstance().getConnection();
-        PreparedStatement stmt=connection.prepareStatement(sql);
+
+        Connection connection=MySQLConnection.getInstance().getConnection();
+        try (PreparedStatement stmt=connection.prepareStatement(sql);
              ResultSet rS=stmt.executeQuery()){
             while (rS.next()){
                 Student student=new Student();
@@ -51,8 +68,8 @@ public class StudentDAO implements IStudentDAO {
     public void insert(Student student){
         String SQL="INSERT INTO alumnos(nombre,apellido,edad,email) VALUES(?,?,?,?)";
 
+        connection = MySQLConnection.getInstance().getConnection();
         try (
-                Connection connection = MySQLConnection.getInstance().getConnection();
                 PreparedStatement stmt = connection.prepareStatement(SQL)
         ){
             stmt.setString(1,student.getNombre());

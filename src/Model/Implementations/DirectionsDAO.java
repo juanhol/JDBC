@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DirectionsDAO implements IDirectionsDAO {
@@ -24,8 +25,33 @@ public class DirectionsDAO implements IDirectionsDAO {
     }
 
     @Override
-    public List toList() {
-        return List.of();
+    public ArrayList<Direction> toListByStudentId(int StudentId) throws SQLException {
+        ArrayList<Direction> directions=new ArrayList<>();
+        String sql="SELECT * FROM direcciones WHERE alumno_id=?";
+        connection=MySQLConnection.getInstance().getConnection();
+
+        try (PreparedStatement stmt= connection.prepareStatement(sql);
+        ){
+            stmt.setInt(1,StudentId);
+            ResultSet rs= stmt.executeQuery();
+
+            while (rs.next()){
+                Direction direction=new Direction();
+                direction.setAltura(rs.getInt("altura"));
+                direction.setCalle(rs.getString("calle"));
+                direction.setId(rs.getInt("id"));
+                direction.setAlumno_id(rs.getInt("alumno_id"));
+
+                directions.add(direction);
+            }
+
+        }
+        catch (SQLException e){
+            System.out.println("Failed to retrieve directions"+e.getMessage());
+            e.printStackTrace();
+        }
+        System.out.println("Directions successfully retrieved");
+        return directions;
     }
 
     @Override

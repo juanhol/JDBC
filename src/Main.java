@@ -1,20 +1,17 @@
 import Model.Implementations.Student;
+import Model.Implementations.StudentDAO;
+import Model.Implementations.StudentsService;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        Student al1=new Student();
-        System.out.println("Ingrese datos del alumno:\n Nombre: ");
-        al1.setNombre(scanner.nextLine());
-        System.out.println("Ingrese el apellido: ");
-        al1.setApellido(scanner.nextLine());
-        System.out.println("Ingrese edad: ");
-        al1.setEdad(scanner.nextInt());
-        System.out.println("Ingrese el email: ");
-        al1.setEmail(scanner.nextLine());
+    public static void main(String[] args) throws SQLException {
+        StudentsService service=new StudentsService();
+        StudentDAO studentDAO=new StudentDAO();
 
+        studentDAO.updateAge(1,23);
+        service.ShowStudentsWithDirections();
 
     }
 }
